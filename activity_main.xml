@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zillow"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zillowproject.MainActivity" >
+
+    <ImageView
+        android:id="@+id/zillowlogo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/submit"
+        android:layout_alignRight="@+id/horizontalLine"
+        android:src="@drawable/zillowlogo" />
+
+    <TextView
+        android:id="@+id/noRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/horizontalLine"
+        android:layout_below="@+id/horizontalLine"
+        android:layout_marginTop="18dp"
+        android:text="No exact match is found -- Verify that the given address is correct"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/submit"
+        android:layout_below="@+id/zillowlogo"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:id="@+id/warningCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_state"
+        android:layout_alignRight="@+id/submit"
+        android:text="This field is required"
+        android:textColor="#ff0000"
+        android:textSize="11dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/warningCity"
+        android:layout_alignLeft="@+id/warningCity"
+        
+        android:background="@drawable/radius"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="text" >
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/city"
+        android:layout_alignLeft="@+id/city"
+        android:text="City*"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/warningAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_city"
+        android:layout_alignLeft="@+id/text_city"
+        android:text="This field is required"
+        android:textColor="#ff0000"
+        android:textSize="11dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/streetAddress"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/warningAddress"
+        android:layout_alignLeft="@+id/warningAddress"
+        android:background="@drawable/radius"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/text_streetAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/streetAddress"
+        android:layout_alignLeft="@+id/streetAddress"
+        android:text="Address*"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/state"
+        android:layout_alignLeft="@+id/warningCity"
+        android:text="State*"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/warningState"
+        android:layout_alignLeft="@+id/text_state"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/radius"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/warningState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zillowlogo"
+        android:layout_alignLeft="@+id/heading"
+        android:text="This field is required"
+        android:textColor="#ff0000"
+        android:textSize="11dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/warningState"
+        android:layout_marginBottom="56dp"
+        android:text="Search"
+        android:textColor="#000000"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_streetAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:paddingTop="10dp"
+        android:text="Search Your Property Here"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
