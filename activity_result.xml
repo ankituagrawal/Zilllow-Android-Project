@@ -1,0 +1,236 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id = "@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+	<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    	<TabWidget android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        
+        >
+        </TabWidget>
+    
+    	<FrameLayout android:id="@android:id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    
+	    	<RelativeLayout
+		    android:id="@+id/tab1"
+		    android:layout_width="fill_parent"
+		    android:layout_height="300dp"
+		    android:orientation="horizontal">
+			<ScrollView
+				android:layout_width="fill_parent"
+				android:layout_height="300dp"
+				android:scrollbars="none"
+				android:layout_weight="1"
+				android:id="@+id/scrollBar">"
+			    <TableLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="300dp"
+				    android:orientation="horizontal"
+				    android:id="@+id/tableId"
+				    android:stretchColumns="1"
+				    android:background="@drawable/bordergray"
+				    android:isScrollContainer="true">
+					
+			       	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/headingZillow" android:gravity="left" android:text="See more results on Zillow:" android:textSize="12dp" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <ImageButton
+					    android:id="@+id/shareButton"
+					    android:layout_width="wrap_content"
+					    android:layout_height="20dp"
+					    android:textStyle="bold"
+					    android:visibility="visible"
+					    android:src="@drawable/facebook"
+					    android:layout_gravity="center"
+					    android:background="#ffffff"
+					    
+					    />
+				   	</TableRow>
+				   	<TableRow>
+				        <TextView android:id="@+id/link" android:layout_span = "2" android:gravity="left" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+					</TableRow>	
+				   	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_1" android:gravity="left" android:text="Property type" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_1" android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>	
+			    	<TableRow>
+				        <TextView android:id="@+id/col_2" android:layout_gravity="left" android:text="Year Built" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_2"  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_3" android:gravity="left"  android:text="Lot Size" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_3" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_4" android:gravity="left" android:text="Finished Area" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_4" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_5" android:gravity="left" android:text="Bathrooms" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_5" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_6" android:gravity="left"  android:text="Bedroom"  android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_6" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_7"  android:gravity="left"  android:text="Tax assessment year" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_7" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_8" android:gravity="left"  android:text="Tax Assessment" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_8" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_9" android:gravity="left"  android:text="Last Sold Price" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_9" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_10" android:gravity="left"  android:text="Last Sold Date" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_10" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_11" android:gravity="left"  android:text="Zestimate property estimate \n as of" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_11" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_12" android:gravity="left"  android:text="30 Days overall change" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_12" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_13" android:gravity="left"  android:text="All time property range" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_13" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_14" android:gravity="left"  android:text="Rent Zestimate Proprty Estimate \n As Of" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_14" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+			    	<TableRow android:background="@drawable/borderwhite">
+				        <TextView android:id="@+id/col_15" android:gravity="left"  android:text="30 Days Rent Change" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_15" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				   	</TableRow>
+			    	<TableRow>
+				        <TextView android:id="@+id/col_16" android:gravity="left"  android:text="All Time Rent Change" android:textSize="12dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+				        <TextView android:id="@+id/val_16" android:text=""  android:textSize="12dp" android:gravity="right" android:paddingRight="6dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+			    	</TableRow>
+				    
+			    </TableLayout>
+			</ScrollView>  
+		</RelativeLayout> 
+		
+		<RelativeLayout
+		    android:id="@+id/tab2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal">
+				
+			    <TextSwitcher
+            	
+            	android:id="@+id/textSwitcher"
+            	android:layout_width="match_parent"
+            	android:layout_height="40dp"
+            	android:layout_gravity="center_horizontal" 
+            	android:background="#ffffff"
+            	android:textAlignment="center"
+            	
+            	/>
+			    
+				<ImageSwitcher
+	            android:id="@+id/imageSwitcher"
+	            android:layout_width="match_parent"
+	            android:layout_height="200dp"
+	            android:layout_gravity="center_horizontal"
+	            android:background="#ffffff" 
+	            android:layout_below="@+id/textSwitcher"/>"
+				
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:gravity="center_horizontal"
+				    android:orientation="horizontal"
+				    android:paddingTop="5dp"
+				    >"
+				<Button
+			      android:id="@+id/buttonPrev"
+			      android:layout_width="100dp"
+			      android:layout_height="wrap_content"
+			      android:onClick="next"
+			      android:background="#909090"
+			      android:text="Previous"
+			      android:textColor="#ffffff"
+			      android:layout_marginTop="245dp"/>
+				
+				<Button
+			      android:id="@+id/buttonNext"
+			      android:layout_width="100dp"
+			      android:layout_height="wrap_content"
+			      android:onClick="next"
+			      android:background="#909090"
+			      android:text="Next"
+			      android:textColor="#ffffff"
+			      android:layout_marginTop="245dp"
+			      android:layout_marginLeft="2dp"/>
+				</LinearLayout>
+				
+				
+		</RelativeLayout>
+    </FrameLayout>
+    
+</LinearLayout>
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="©Zillow, Inc.,2006-2014"
+        android:layout_marginTop="400dp"
+        android:paddingLeft="100dp"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        android:id="@+id/foot1"
+        >
+        </TextView>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use is subject to "
+        android:layout_marginTop="410dp"
+        android:paddingLeft="80dp"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        android:id="@+id/foot2"
+        
+        >
+        </TextView>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms of Use"
+        android:id="@+id/footer_1"
+        android:layout_marginTop="410dp"
+        android:paddingLeft="160dp"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        
+        >
+        </TextView>
+        <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/footer_2"
+        android:layout_height="wrap_content"
+        android:text="Whats a zestimate?"
+        android:layout_marginTop="420dp"
+        android:paddingLeft="110dp"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        >
+        </TextView>
+</TabHost>
